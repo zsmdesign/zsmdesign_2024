@@ -29,20 +29,20 @@ export default function Home() {
         
         <meta property="og:site_name" content="ZSMDesign" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://zsmdesign.com/" />
+        <meta property="og:url" content="https://zsmdesign.com/" />
         <meta property="og:title" content="ZSMDesign Web Development" />
         <meta property="og:description" content="Web development, Graphic design, Brand development, Video production." />
         
-        <meta property="og:image" content="http://zsmdesign.com/og-hero-poster.jpg" />
+        <meta property="og:image" content="https://zsmdesign.com/og-hero-poster.jpg" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1922" />
         <meta property="og:image:height" content="1080" />
         <meta property="og:image:alt" content="ZSMDesign Landing Page" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://zsmdesign.com/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://zsmdesign.com/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="https://zsmdesign.com/favicon-16x16.png" />
       </Head>
 
       <main>
