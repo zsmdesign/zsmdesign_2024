@@ -1,0 +1,78 @@
+@import '../styles/variables.scss';
+@import '../styles/breakpoints.scss';
+
+body {
+   background-color: $background-color;
+   color: $base-font-color;
+   margin: 0;
+}
+
+@font-face {
+   font-family: 'Azo Sans Regular';
+   src: url('/fonts/AzoSans-Regular.eot') format('embedded-opentype'),
+       url('/fonts/AzoSans-Regular.woff2') format('woff2'),
+       url('/fonts/AzoSans-Regular.woff') format('woff'),
+       url('/fonts/AzoSans-Regular.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Azo Sans Bold';
+   src: url('/fonts/AzoSans-Bold.eot') format('embedded-opentype'),
+       url('/fonts/AzoSans-Bold.woff2') format('woff2'),
+       url('/fonts/AzoSans-Bold.woff') format('woff'),
+       url('/fonts/AzoSans-Bold.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Azo Sans Light';
+   src: url('/fonts/AzoSans-Light.eot') format('embedded-opentype'),
+       url('/fonts/AzoSans-Light.woff2') format('woff2'),
+       url('/fonts/AzoSans-Light.woff') format('woff'),
+       url('/fonts/AzoSans-Light.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'Azo Sans Bold';
+}
+
+h2 {
+   font-size: 190%;
+   margin-bottom: 1rem;
+
+   @include media-md-down {
+      font-size: 180%;
+   }
+   @include media-sm-down {
+      font-size: 170%;
+   }
+}
+
+h3 {
+   @include media-md-down {
+      font-size: 100%;
+   }
+}
+
+p, span, a {
+   font-family: 'Azo Sans Regular';
+}
+
+p {
+   line-height: 1.3;
+}
+
+a {
+   text-decoration: none;
+   color: $brand-color;
+   transition: color ease-in-out .3s;
+   cursor: pointer;
+
+   &:hover {
+      color: $on-hover;
+   }
+}
+
+button {
+   cursor: pointer;
+   border-radius: 5px;
+   border: 2px solid;
+   text-transform: uppercase;
+}

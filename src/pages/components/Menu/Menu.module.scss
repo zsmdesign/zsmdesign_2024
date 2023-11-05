@@ -1,0 +1,153 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/breakpoints.scss';
+
+.menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 3.5rem;
+   z-index: 70;
+   box-shadow: 0 4px 9px rgba(79, 22, 59, 0.7);
+
+   .menuOptions {
+      position: absolute;
+      display: flex;
+      gap: 5%;
+      justify-content: center;
+      z-index: 70;
+      width: 100%;
+
+      a {
+         position: relative;
+         color: $background-color;
+         text-transform: uppercase;
+
+         &:before {
+            content: '';
+            opacity: 0;
+            position: absolute;
+            left: -1.5rem;
+            top: 1.5rem;
+            display: block;
+            width: 0; 
+            height: 0; 
+            border-top: .3rem solid transparent;
+            border-bottom: .3rem solid transparent;
+            border-left: .5rem solid $background-color;
+            transition: left ease-in-out .2s, opacity ease-in-out .2s;
+         }
+         &:after {
+            content: '';
+            opacity: 0;
+            position: absolute;
+            right: -1.5rem;
+            top: 1.5rem;
+            display: block;
+            width: 0; 
+            height: 0; 
+            border-top: .3rem solid transparent;
+            border-bottom: .3rem solid transparent;
+            border-right: .5rem solid $background-color;
+            transition: right cubic-bezier(0.3, 0.1, 0, 0.99) .3s, opacity ease-in-out .2s;
+         }
+
+         &:hover {
+            color: lighten($color: $brand-color, $amount: 20%)
+         }
+
+         &.active {
+            &:before {
+               opacity: 1;
+               left: -1rem;
+            }
+            &:after {
+               opacity: 1;
+               right: -1rem;
+            }
+         }
+      }
+
+      @include media-md-down {
+         background-color: $menu-color;
+         box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+         padding: 7rem 0 1rem;
+         transition: top cubic-bezier(.22, .68, 0, 1.3) .3s;
+         text-align: center;
+         flex-direction: column;
+         top: -2rem;
+
+         a {
+            opacity: 1;
+            transition: opacity ease-in-out .3s;
+
+            &:nth-child(1) {
+               transition-delay: .3s;
+            }
+            &:nth-child(2) {
+               transition-delay: .4s;
+            }
+            &:nth-child(3) {
+               transition-delay: .5s;
+            }
+         }
+
+         &.opened {
+            top: -20rem;
+            transition-delay: .3s;
+
+            a {
+               opacity: 0;
+               transition-delay: 0ms;
+            }
+         }
+      }
+   }
+
+   .menuBody {
+      position: absolute;
+      background-color: $menu-color;
+      right: 0;
+      height: 3.5rem;
+      width: 85%;
+
+      @include media-lg-down {
+         width: 70%;
+      }
+   }
+   
+   .menuLogo {
+      background-color: $menu-color;
+      transition: background-color ease-in-out .3s;
+      position: relative;
+
+      @include media-md-down {
+         left: -1rem;
+      }
+      @include media-sm-down {
+         left: -3rem;
+      }
+
+      &.scrolled {
+         background-color: rgba(241, 136, 234, .5);
+      }
+   }
+}
+
+.mobileCover {
+   width: 100%;
+   position: fixed;
+   height: 3.5rem;
+   background: transparent;
+   z-index: 98;
+   box-shadow: 0 4px 9px rgba(0, 0, 0, 0.4);
+   transition: box-shadow cubic-bezier(.22, .68, 0, 1.3) .3s;
+
+   &.opened {
+      box-shadow: none;
+   }
+
+   @include media-md-up {
+      display: none;
+   }
+}

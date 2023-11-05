@@ -1,0 +1,10 @@
+{
+   "type": "website",
+   "url": "https://zsmdesign.com",
+   "title": "ZSM Design",
+   "description": "Web development, Graphic design, Brand development, Video production.",
+   "siteName": "ZSM Design",
+   "images": [{
+      "url": "https://zsmdesign.com/og-hero-poster.jpg"
+   }]
+}

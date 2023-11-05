@@ -1,0 +1,245 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/breakpoints.scss';
+
+.videos {
+   position: relative;
+   @include global-padding;
+
+   @include media-md-up {
+      padding-bottom: 20rem;
+   }
+   @include media-xxl-up {
+      padding-bottom: 25rem;
+   }
+   @include media-md-down {
+      padding-bottom: 20rem;
+   }
+   @include media-sm-down {
+      padding-bottom: 15rem;
+   }
+
+   &:before {
+      content: '';
+      position: absolute;
+      background: linear-gradient(180deg, rgba(254,253,255,1) 0%, rgba(255,254,255,0) 100%);
+      display: block;
+      top: -19rem;
+      left: 0;
+      height: 5rem;
+      width: 100%;
+      z-index: 0;
+
+      @include media-sm-down {
+         display: none;
+      }
+   }
+
+   .description {
+      margin-top: 0;
+      color: white;
+      text-align: center;
+
+      @include media-lg-down {
+         font-family: 'Azo Sans Light';
+      }
+   }
+
+   .separatorContainer {
+      position: absolute;
+      padding-bottom: 4rem;
+      left: 0;
+      top: -250px;
+      width: 100%;
+      z-index: -1;
+
+      mask-image: url('/images/zsm-segment-mask-top.svg');
+      mask-repeat: no-repeat;
+      mask-position: bottom;
+      mask-size: cover;
+      
+      .videoBackground {
+         width: 100%;
+         position: relative;
+      }
+
+      @include media-lg-down {
+         top: -170px;
+         padding-bottom: 2rem;
+      }
+      @include media-md-down {
+         top: -100px;
+         padding-bottom: 1rem;
+      }
+      @include media-md-down {
+         top: -60px;
+      }
+   }
+   
+   .header {
+      text-align: center;
+      margin: 0;
+      color: white;
+      padding-top: 12rem;
+
+      
+      @include media-xl-up {
+         padding-top: 15rem;
+      }
+      @include media-xxl-up {
+         padding-top: 20rem;
+      }
+      @include media-lg-down {
+         padding-top: 7rem;
+      }
+      @include media-md-down {
+         padding-top: 8rem;
+      }
+      @include media-sm-down {
+         padding-top: 5rem;
+      }
+   }
+
+   .subHeaderContainer {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+      align-items: baseline;
+      margin-bottom: 1.5rem;
+
+      h3 {
+         margin-top: .5rem;
+         margin-bottom: 0;
+         font-family: 'Azo Sans Regular';
+         color: white;
+      }
+
+      @include media-md-down {
+         h3 {
+            margin-bottom: 0;
+         }
+      }
+   }
+
+   .videosRow {
+      h3 {
+         font-size: 150%;
+         margin: 0;
+         color: white;
+      }
+
+      .lgDown {
+         display: none;
+         margin-bottom: 1rem;
+      }
+
+      .videoContainer {
+         display: flex;
+         padding-top: 2rem;
+         gap: 2rem;
+         width: 80%;
+         margin: auto;
+      }
+      .player {
+         width: 100%;
+         height: 100%;
+         border-radius: 5px;
+         overflow: hidden;
+         box-shadow: 0 5px 10px rgba(79, 22, 59, .5);
+      }
+      .text {
+         color: white;
+         width: 70%;
+
+         p {
+            margin-top: .5rem;
+            font-family: 'Azo Sans Light';
+         }
+      }
+
+      @include media-lg-down {
+         .lgDown {
+            display: block;
+         }
+         .text {
+            margin-top: .5rem;
+            width: 100%;
+
+            h3 {
+               display: none;
+            }
+         }
+         .videoContainer {
+            width: 100%;
+            flex-direction: column;
+            gap: 0;
+         }
+      }
+   }
+
+   .multiGradient {
+      mask-image: url('/images/zsm-segment-mask-bottom.svg');
+      mask-repeat: no-repeat;
+      mask-position: bottom;
+      mask-size: cover;
+      background: linear-gradient(#a23c99, #9a3d56);
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: -2px;
+      right: 0;
+      z-index: -2;
+
+      .gradient {
+         position: absolute;
+         bottom: 0;
+         top: 0;
+         left: 0;
+         right: 0;
+         z-index: -2;
+         background: 
+         radial-gradient(
+            farthest-side at right top,
+            rgba(79, 22, 59, 0.4), 
+            transparent 70%
+         ),
+         radial-gradient(
+            farthest-side at left bottom,
+            rgba(79, 22, 59, 0.4), 
+            transparent 70%
+         ),
+         radial-gradient(
+            farthest-corner at 90% 60%,
+            rgba(255, 50, 50, 0.3), 
+            transparent 55%
+         ),
+         radial-gradient(
+            farthest-corner at 30% 50%,
+            rgba(204, 110, 169, .8), 
+            transparent 70%
+         );
+      }
+   }
+
+   .bottomSeparator {
+      position: absolute;
+      left: 0px;
+      height: 45rem;
+      width: 100%;
+      z-index: -3;
+
+      @include media-lg-down {
+         background-size: contain;
+      }
+
+      &.first {
+         background: url('/images/zsm-segment-bottom-1.svg') center center no-repeat;
+         background-size: cover;
+         bottom: -25rem;
+      }
+      &.second {
+         background: url('/images/zsm-segment-bottom-2.svg') center center no-repeat;
+         background-size: cover;
+         bottom: -17rem;
+      }
+   }
+}
