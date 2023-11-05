@@ -47,22 +47,20 @@ export default function Menu () {
          </div>
 
          <div className={styles.menu}>
-            <div className={cn(styles.menuOptions, {[styles.opened]: !menuOpened})}>
+            <div className={styles.menuOptions}>
                <a className={cn({[styles.active]: activeMenu === "frontend"})} onClick={() => handleMenuClick('frontend')}><h3>Front End</h3></a>
                <a className={cn({[styles.active]: activeMenu === "videos"})} onClick={() => handleMenuClick('videos')}><h3>Videos</h3></a>
                <a className={cn({[styles.active]: activeMenu === "contact"})} onClick={() => handleMenuClick('aboutme')}><h3>Contact</h3></a>
             </div>
-            <div className={styles.menuBody}></div>
-            <Image
-               className={cn(styles.menuLogo, {[styles.scrolled]: menuScrolled})}
-               src={`/images/zsm-menu-logo.svg`}
-               alt="site illustration"
-               title="Site Illustration"
-               height={56}
-               width={836}
-               priority
-            />
          </div>
+
+         <div className={cn(styles.mobileMenuOptions, {[styles.active]: menuOpened})}>
+            <a className={cn({[styles.active]: activeMenu === "frontend"})} onClick={() => handleMenuClick('frontend')}><h3>Front End</h3></a>
+            <a className={cn({[styles.active]: activeMenu === "videos"})} onClick={() => handleMenuClick('videos')}><h3>Videos</h3></a>
+            <a className={cn({[styles.active]: activeMenu === "contact"})} onClick={() => handleMenuClick('aboutme')}><h3>Contact</h3></a>
+         </div>
+            
+         <div className={cn(styles.menuBody, {[styles.scrolled]: menuScrolled})}></div>
       </>
    );
 }

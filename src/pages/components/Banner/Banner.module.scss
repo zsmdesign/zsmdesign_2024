@@ -48,8 +48,9 @@
             width: 20%;
          }
          .title {
-            margin-top: 5rem;
-            text-shadow: 0px 2px 8px rgba(0, 0, 0, .9);
+            margin-top: 10rem;
+            color: $brand-color;
+            text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
          }
       }
 
@@ -57,11 +58,17 @@
          .mainLogo {
             display: none;
          }
+         .spacing {
+            padding: 8.5rem 2rem 0;
+         }
+         .title {
+            margin-top: 7rem;
+         }
       }
 
       @include media-xs-down {
          .title {
-            margin-top: 7rem;
+            margin-top: 5rem;
          }
       }
    }

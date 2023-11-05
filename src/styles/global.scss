@@ -7,6 +7,10 @@ body {
    margin: 0;
 }
 
+#__next {
+   overflow: hidden;
+}
+
 @font-face {
    font-family: 'Azo Sans Regular';
    src: url('/fonts/AzoSans-Regular.eot') format('embedded-opentype'),

@@ -133,21 +133,23 @@ export default function FrontEnd () {
 
          <div className={styles.sitesContainer} ref={targetRef}>
             <div className={styles.textColumn} style={{height: textColumnHeight > 0 ? textColumnHeight : 'auto'}}>
+               <div className={styles.arrow} onClick={() => handleArrowClick('left')}>
+                  <Image
+                     src={`/images/arrow.svg`}
+                     alt="navigation arrow"
+                     title="Left Arrow"
+                     fill
+                     style={{
+                        objectFit: 'contain'
+                     }}
+                  />
+               </div>
+
                {contentArray.map((o) => {
                   return (
                      <div key={o.id} className={cn(styles.content, {[styles.reveal]: currentCardId === o.id}, {["target"]: currentCardId === o.id})}>
                         <div className={styles.imageContainer}>
-                           <div className={styles.arrow} onClick={() => handleArrowClick('left')}>
-                              <Image
-                                 src={`/images/arrow.svg`}
-                                 alt="navigation arrow"
-                                 title="Left Arrow"
-                                 fill
-                                 style={{
-                                    objectFit: 'contain'
-                                 }}
-                              />
-                           </div>
+                           
                            <Image
                               src={`/images/sites/site-${o.id}.png`}
                               alt={`${o.title} illustration`}
@@ -158,17 +160,6 @@ export default function FrontEnd () {
                                  objectFit: 'contain'
                               }}
                            />
-                           <div className={cn(styles.arrow, styles.right)} onClick={() => handleArrowClick('right')}>
-                              <Image
-                                 src={`/images/arrow.svg`}
-                                 alt="navigation arrow"
-                                 title="Left Arrow"
-                                 fill
-                                 style={{
-                                    objectFit: 'contain'
-                                 }}
-                              />
-                           </div>
                         </div>
                         
                         <a className={styles.titleContainer} href={o.link} target="_blank">
@@ -179,6 +170,18 @@ export default function FrontEnd () {
                      </div>
                   )
                })}
+
+               <div className={cn(styles.arrow, styles.right)} onClick={() => handleArrowClick('right')}>
+                  <Image
+                     src={`/images/arrow.svg`}
+                     alt="navigation arrow"
+                     title="Left Arrow"
+                     fill
+                     style={{
+                        objectFit: 'contain'
+                     }}
+                  />
+               </div>
             </div>
 
             <Legend activeId={currentCardId} handleCardClick={handleCardClick}/>
