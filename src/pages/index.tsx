@@ -33,7 +33,7 @@ export default function Home() {
         <meta property="og:title" content="ZSMDesign Web Development" />
         <meta property="og:description" content="Web development, Graphic design, Brand development, Video production." />
         
-        <meta property="og:image" content="http://zsmdesign.com/public/og-hero-poster.jpg" />
+        <meta property="og:image" content="http://zsmdesign.com/og-hero-poster.jpg" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1922" />
         <meta property="og:image:height" content="1080" />
