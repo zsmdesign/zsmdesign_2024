@@ -154,6 +154,13 @@
             margin-top: .5rem;
             font-family: 'Azo Sans Light';
          }
+         a {
+            color: white;
+
+            &:hover {
+               color: $on-hover;
+            }
+         }
       }
 
       @include media-lg-down {

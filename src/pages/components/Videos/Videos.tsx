@@ -8,10 +8,10 @@ import VideoPlayer from "../../common/VideoPlayer/VideoPlayer";
 export default function Videos () {
    const videos = [
       {sources: [{src: "/videos/streams/Uncharted-Territories.mp4", type: "video/mp4"}], poster: '/videos/streams/Uncharted-Territories.jpg'},
+      {sources: [{src: "/videos/streams/StandUpN-Run.mp4", type: "video/mp4"}], poster: '/videos/streams/StandUpN-Run.jpg'},
       {sources: [{src: "/videos/streams/Zsmdesign-Opening.mp4", type: "video/mp4"}], poster: '/videos/streams/Zsmdesign-Opening.jpg'},
       {sources: [{src: "/videos/streams/Aimotive-Rain.mp4", type: "video/mp4"}], poster: '../videos/streams/Aimotive-Rain.jpg'},
       {sources: [{src: "/videos/streams/Aimotive-Ces.mp4", type: "video/mp4"}], poster: '/videos/streams/Aimotive-Ces.jpg'},
-      {sources: [{src: "/videos/streams/Future-Gadgets.mp4", type: "video/mp4"}], poster: '/videos/streams/Future-Gadgets.jpg'},
    ];
 
 
@@ -46,12 +46,23 @@ export default function Videos () {
                <div className={styles.text}>
                   <h3>Uncharted Territories</h3>
                   <p>This marks my most ambitious video to date. My trusty drone has ventured alongside me to countless destinations, and what you're about to see is a mere glimpse of our three-year journey. We encountered numerous challenging scenarios, and the moments shared here only scratch the surface of its incredible captures. Fortunately, it always managed to find its way back to my side.</p>
+                  <a href="https://vimeo.com/833103566" target="_blank">Check out in 4K</a>
+               </div>
+            </div>
+            <div className={styles.videoContainer}>
+               <h3 className={styles.lgDown}>Gadgets</h3>
+               <div className={styles.player}>
+                  <VideoPlayer options={videos[1]} />
+               </div>
+               <div className={styles.text}>
+                  <h3>StandUp'N Run</h3>
+                  <p>I had the incredible opportunity to capture footage during an overnight agility competition and show event this past summer. With a super focused editing session managed to finish this one in a couple of hours. The canine participants truly stole the show with their incredible performances.</p>
                </div>
             </div>
             <div className={styles.videoContainer}>
                <h3 className={styles.lgDown}>Neon Lights</h3>
                <div className={styles.player}>
-                  <VideoPlayer options={videos[1]} />
+                  <VideoPlayer options={videos[2]} />
                </div>
                <div className={styles.text}>
                   <h3>Neon Lights</h3>
@@ -61,7 +72,7 @@ export default function Videos () {
             <div className={styles.videoContainer}>
                <h3 className={styles.lgDown}>Improvise</h3>
                <div className={styles.player}>
-                  <VideoPlayer options={videos[2]} />
+                  <VideoPlayer options={videos[3]} />
                </div>
                <div className={styles.text}>
                   <h3>Improvise</h3>
@@ -71,21 +82,11 @@ export default function Videos () {
             <div className={styles.videoContainer}>
                <h3 className={styles.lgDown}>Big Projects</h3>
                <div className={styles.player}>
-                  <VideoPlayer options={videos[3]} />
+                  <VideoPlayer options={videos[4]} />
                </div>
                <div className={styles.text}>
                   <h3>Big Projects</h3>
                   <p>Crafted in 2017 as a promotional video for our Las Vegas CES demos, this project offered me a unique opportunity. While I wasn't the one operating the camera, actively participating in the planning alongside our dedicated shooting team proved both fascinating and valuable. Exploring and mastering the wide array of gadgets we employed added an extra layer of intrigue to the experience.</p>
-               </div>
-            </div>
-            <div className={styles.videoContainer}>
-               <h3 className={styles.lgDown}>Gadgets</h3>
-               <div className={styles.player}>
-                  <VideoPlayer options={videos[4]} />
-               </div>
-               <div className={styles.text}>
-                  <h3>Gadgets</h3>
-                  <p>I'm a tech enthusiast at heart, and when I first got my hands on the innovative Syrp time-lapse rail system, I couldn't resist giving it a whirl. What you see here is the result of my experiment with this fun tool.</p>
                </div>
             </div>
          </div>

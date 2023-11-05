@@ -31,6 +31,12 @@
       z-index: 70;
       width: 100%;
 
+      @include media-md-down {
+         display: none;
+      }
+   }
+
+   .withArrows {
       a {
          position: relative;
          color: $background-color;
@@ -79,10 +85,6 @@
                right: -1rem;
             }
          }
-      }
-
-      @include media-md-down {
-         display: none;
       }
    }
 }

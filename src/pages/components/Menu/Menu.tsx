@@ -47,17 +47,17 @@ export default function Menu () {
          </div>
 
          <div className={styles.menu}>
-            <div className={styles.menuOptions}>
+            <div className={cn(styles.menuOptions, styles.withArrows)}>
                <a className={cn({[styles.active]: activeMenu === "frontend"})} onClick={() => handleMenuClick('frontend')}><h3>Front End</h3></a>
                <a className={cn({[styles.active]: activeMenu === "videos"})} onClick={() => handleMenuClick('videos')}><h3>Videos</h3></a>
-               <a className={cn({[styles.active]: activeMenu === "contact"})} onClick={() => handleMenuClick('aboutme')}><h3>Contact</h3></a>
+               <a className={cn({[styles.active]: activeMenu === "aboutme"})} onClick={() => handleMenuClick('aboutme')}><h3>Contact</h3></a>
             </div>
          </div>
 
          <div className={cn(styles.mobileMenuOptions, {[styles.active]: menuOpened})}>
             <a className={cn({[styles.active]: activeMenu === "frontend"})} onClick={() => handleMenuClick('frontend')}><h3>Front End</h3></a>
             <a className={cn({[styles.active]: activeMenu === "videos"})} onClick={() => handleMenuClick('videos')}><h3>Videos</h3></a>
-            <a className={cn({[styles.active]: activeMenu === "contact"})} onClick={() => handleMenuClick('aboutme')}><h3>Contact</h3></a>
+            <a className={cn({[styles.active]: activeMenu === "aboutme"})} onClick={() => handleMenuClick('aboutme')}><h3>Contact</h3></a>
          </div>
             
          <div className={cn(styles.menuBody, {[styles.scrolled]: menuScrolled})}></div>
