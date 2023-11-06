@@ -33,6 +33,9 @@
       @include media-lg-down {
          .spacing {
             padding: 5rem 2rem 0;
+            @-moz-document url-prefix() {
+               padding: 5.5rem 2rem 0;
+            }
          }
          .title {
             font-size: 1.3rem;
